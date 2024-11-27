@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}Детали поста{% endblock %}
+{% block content %}
+<h1>Детали поста</h1>
+<p>Это информация о посте с ID: {{ post_id }}</p>
+<p>Вернуться на <a href="{% url 'home' %}">главную страницу</a>.</p>
+{% endblock %}

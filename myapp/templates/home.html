@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Главная страница{% endblock %}
+{% block content %}
+<h1>Добро пожаловать на наш сайт!</h1>
+<p>Это главная страница. Вы можете узнать больше <a href="{% url 'about' %}">о нас</a> или <a href="{% url 'contact' %}">связаться с нами</a>.</p>
+
+<h2>Профили</h2>
+<ul class="button-list">
+    <li>
+        <a href="{% url 'user_profile' username='john' %}" class="button">Профиль пользователя "john"</a>
+    </li>
+    <li>
+        <a href="{% url 'user_profile' username='jane' %}" class="button">Профиль пользователя "jane"</a>
+    </li>
+    <li>
+        <a href="{% url 'post_detail' post_id=1 %}" class="button">Детали поста с ID 1</a>
+    </li>
+    <li>
+        <a href="{% url 'post_detail' post_id=42 %}" class="button">Детали поста с ID 42</a>
+    </li>
+</ul>
+{% endblock %}

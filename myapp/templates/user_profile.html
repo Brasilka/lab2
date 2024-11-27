@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}Профиль пользователя{% endblock %}
+{% block content %}
+<h1>Профиль пользователя</h1>
+<p>Имя пользователя: {{ username }}</p>
+<p>Вернуться на <a href="{% url 'home' %}">главную страницу</a>.</p>
+{% endblock %}
